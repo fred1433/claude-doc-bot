@@ -1,0 +1,32 @@
+{
+  "name": "claude-doc-bot",
+  "private": true,
+  "workspaces": [
+    "worker",
+    "api", 
+    "web"
+  ],
+  "packageManager": "pnpm@8.15.0",
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "build": "pnpm -r build",
+    "start": "pnpm --filter @claude-doc-bot/api start",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "type-check": "pnpm -r type-check",
+    "deploy:api": "pnpm --filter @claude-doc-bot/api deploy",
+    "deploy:web": "pnpm --filter @claude-doc-bot/web deploy"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+} 
